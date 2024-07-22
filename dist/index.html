@@ -9,8 +9,9 @@
     <meta property="og:title" content="Material Reuse Library - re:new" />
     <meta property="og:description" content="">
     <meta property="og:image" content="" />
-  <script type="module" crossorigin src="/assets/main-DcgEDpT5.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-C2ll503P.css">
+  <script type="module" crossorigin src="/assets/index.hbs-CmtSKEiP.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-Dbs6y-HY.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-DdX5C-CO.css">
 </head>
 
 <body class="h-100">
@@ -23,14 +24,58 @@
             </nav>
         </header>        
         <main class="flex-fill px-4 py-5">
-              <div class="d-flex flew-row">
-                  <a class="btn btn-primary me-4" href="https://www.re-new.io/reuse-library">
-                      <svg class="bi me-1" width="14" height="14" fill="currentColor">
+              <div class="mb-5 d-flex align-items-start">
+                  <a class="btn btn-primary btn-square-icon me-4" href="https://www.re-new.io/reuse-library" aria-label="Back to previous page">
+                      <svg class="bi" width="24" height="24" fill="currentColor">
                           <use xlink:href="/bootstrap-icons.svg#arrow-left" />
                       </svg>
                   </a>
                   <h1>Material Reuse Library</h1>
-              </div></main>
+              </div>
+              <section class="mx-5 mb-4 d-flex align-items-start">
+                <div class="input-group w-25 ms-4 mb-3 me-5">
+                    <input type="text" class="form-control" placeholder="Search for components...">
+                    <button class="btn btn-primary" type="button">
+                      <svg class="bi" width="14" height="14" fill="currentColor">
+                        <use xlink:href="/bootstrap-icons.svg#search" />
+                      </svg>
+                    </button>
+                </div>
+                <button class="btn btn-primary" type="button">
+                  Filter
+                  <svg class="bi" width="14" height="14" fill="currentColor">
+                    <use xlink:href="/bootstrap-icons.svg#sliders" />
+                  </svg>
+                </button>
+              </section>
+            
+              <template id="component-card-template">
+                <div class="col">
+                  <div class="card">
+                    <a href="/component/?id=" class="card-link">
+                      <div class="card-img-top d-flex flex-column" style="background-image: url('https://placehold.co/395x100')">
+                        Test
+                        <h5 class="card-title justify-self-end">Card title</h5>
+                      </div>
+                      <div class="card-body">            
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </template>
+            
+              <section class="mx-5 row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+                <component-card></component-card>
+              </section>
+        </main>
         <footer class="w-100 px-4 py-2 text-center">
             Copyright 2024 - <a href="https://www.re-new.io/">re:new</a>
         </footer>
