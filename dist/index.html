@@ -9,8 +9,9 @@
     <meta property="og:title" content="Material Reuse Library - re:new" />
     <meta property="og:description" content="">
     <meta property="og:image" content="" />
-  <script type="module" crossorigin src="/assets/index.hbs-BrFXDGZR.js"></script>
+  <script type="module" crossorigin src="/assets/index.hbs-CkXR8pp9.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/main-BV75xGHl.js">
+  <link rel="modulepreload" crossorigin href="/assets/custom-element-D-pRINfX.js">
   <link rel="stylesheet" crossorigin href="/assets/main-DdXscreC.css">
   <link rel="stylesheet" crossorigin href="/assets/index-DX11ibHm.css">
 </head>
@@ -35,7 +36,7 @@
                 <div class="ms-4 align-self-center">
                 </div>
             </div>
-              <section class="mx-5 mb-4 d-flex flex-wrap align-items-start">
+              <section id="component-search" class="mx-5 mb-4 d-flex flex-wrap align-items-start">
                 <div class="input-group w-25 ms-4 mb-3 me-5">
                     <input type="text" class="form-control" placeholder="Search for components...">
                     <button class="btn btn-primary" type="button">
@@ -93,52 +94,7 @@
                 </div>
               </section>
             
-              <template id="component-card-template">
-                <div class="card h-100">
-                  <a href="/component/?id=" class="card-link h-100 d-flex flex-column">
-                    <div class="card-img-top d-flex flex-column" style="background-image: url('https://placehold.co/395x100')">
-                      <div class="d-flex">
-                        <span class="badge badge--icon rounded-pill text-bg-dark">
-                          <span class="badge-icon">
-                            <svg class="bi" width="14" height="14" fill="currentColor">
-                              <use xlink:href="/bootstrap-icons.svg#house" />
-                            </svg>
-                          </span>
-                          <span>Skin</span>
-                        </span>
-                        <span class="ms-auto badge rounded-pill text-bg-dark">4</span>
-                      </div>
-                      <h5 class="card-title mt-auto">External Masonry Wall</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column">            
-                      <p class="card-text">Composed of 2 layers of London brick and mortar with an air gap. Commonly found in urban settings in buildings dating from 1800 to present day.</p>
-                      <div class="d-flex mt-auto">
-                        <div class="d-flex flex-column">
-                          <span class="badge rounded-pill text-bg-dark mt-1">london clay brick</span>
-                          <span class="badge rounded-pill text-bg-dark mt-1">cement mortar</span>
-                        </div>
-                        <div class="ms-auto align-content-end">
-                          <button class="btn btn-sm btn-round-icon btn-dark" type="button">
-                            <svg class="bi" width="10" height="10" fill="currentColor">
-                              <use xlink:href="/bootstrap-icons.svg#share" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </template>
-            
-              <section class="mx-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-5">
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
-                <component-card class="d-flex"></component-card>
+              <section id="component-results" class="mx-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-5">
               </section>
         </main>
         <footer class="w-100 px-4 py-2 text-center">
