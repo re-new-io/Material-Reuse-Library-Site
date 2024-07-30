@@ -1,4 +1,4 @@
-import"./main-BV75xGHl.js";import{t as c,G as n,x as u}from"./custom-element-D-pRINfX.js";var p=Object.defineProperty,m=Object.getOwnPropertyDescriptor,v=(i,t,s,d)=>{for(var e=d>1?void 0:d?m(t,s):t,a=i.length-1,r;a>=0;a--)(r=i[a])&&(e=(d?r(t,s,e):r(e))||e);return d&&e&&p(t,s,e),e};let l=class extends n{render(){return u`
+import"./main-CKBA7XQP.js";import{t as c,G as n,x as u}from"./custom-element-1513oVZp.js";var p=Object.defineProperty,m=Object.getOwnPropertyDescriptor,v=(i,t,s,d)=>{for(var e=d>1?void 0:d?m(t,s):t,a=i.length-1,r;a>=0;a--)(r=i[a])&&(e=(d?r(t,s,e):r(e))||e);return d&&e&&p(t,s,e),e};let l=class extends n{render(){return u`
         <div class="card position-relative mb-4">
             <div class="card-header py-3 bg-brown text-bg-dark">
               <h4 class="fs-5 m-0">Clay Brick</h2>
