@@ -1,4 +1,4 @@
-import{n as Lt,t as pr,G as gr,x as sn}from"./main-YTSNKXdW.js";import{D as mr}from"./database-_5CBS0OY.js";var _r=Object.defineProperty,vr=Object.getOwnPropertyDescriptor,gt=(s,t,e,n)=>{for(var i=n>1?void 0:n?vr(t,e):t,o=s.length-1,r;o>=0;o--)(r=s[o])&&(i=(n?r(t,e,i):r(i))||i);return n&&i&&_r(t,e,i),i};let et=class extends gr{constructor(){super(...arguments),this.materials=[]}render(){return sn`
+import{n as Lt,t as pr,G as gr,x as sn,D as mr}from"./database-DsAmLPVN.js";import"./shearing-layer-badge-CaQ_mhwi.js";var _r=Object.defineProperty,vr=Object.getOwnPropertyDescriptor,gt=(s,t,e,n)=>{for(var i=n>1?void 0:n?vr(t,e):t,o=s.length-1,r;o>=0;o--)(r=s[o])&&(i=(n?r(t,e,i):r(i))||i);return n&&i&&_r(t,e,i),i};let et=class extends gr{constructor(){super(...arguments),this.materials=[]}render(){return sn`
         <div class="card h-100">
             <a href="/component/?id=${this.componentId}" class="card-link h-100 d-flex flex-column">
                 <div class="card-img-top card-img-top--gradient bg-primary-subtle d-flex flex-column" style="background-image: url('${this.imageUrl}')">
