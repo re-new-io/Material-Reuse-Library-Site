@@ -99,7 +99,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
                     Carbon
                 </dt>
                 <dd>
-                    ${this.carbon}
+                    ${this.carbon||"-"}
                 </dd>
                 </div>
                 <div>
@@ -107,7 +107,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
                     Cost
                 </dt>
                 <dd>
-                    ${this.cost}
+                    ${this.cost||"-"}
                 </dd>
                 </div>
                 <div>
@@ -115,7 +115,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
                     Programme
                 </dt>
                 <dd>
-                    ${this.programme}
+                    ${this.programme||"-"}
                 </dd>
                 </div>
             </div>
