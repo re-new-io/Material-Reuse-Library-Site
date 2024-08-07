@@ -1,4 +1,4 @@
-import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-tdLLSYSD.js";import"./feasibility-considerations-card-DdQhp1pG.js";var K=Object.defineProperty,V=Object.getOwnPropertyDescriptor,M=(i,r,s,e)=>{for(var t=e>1?void 0:e?V(r,s):r,n=i.length-1,o;n>=0;n--)(o=i[n])&&(t=(e?o(r,s,t):o(t))||t);return e&&t&&K(r,s,t),t};let $=class extends T{constructor(){super(...arguments),this.items=[]}render(){return g`
+import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-EJmoQhCt.js";import"./feasibility-considerations-card-CtpV5K8x.js";var K=Object.defineProperty,V=Object.getOwnPropertyDescriptor,M=(i,r,s,e)=>{for(var t=e>1?void 0:e?V(r,s):r,n=i.length-1,o;n>=0;n--)(o=i[n])&&(t=(e?o(r,s,t):o(t))||t);return e&&t&&K(r,s,t),t};let $=class extends T{constructor(){super(...arguments),this.items=[]}render(){return g`
         <div class="card mb-5">
             <div class="card-header py-4 bg-brown text-bg-dark">
                 <h2 class="fs-5 m-0">Project Team</h2>
@@ -20,38 +20,40 @@ import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-tdLLSYSD.js";im
         <div class="row roadmap__row">
             <div class="col-2 roadmap__circle">
             </div>
-            <div class="col-5">
-                <div class="card h-100">
-                    <div class="card-header py-3 bg-primary text-bg-dark text-start">
-                        <h2 class="fs-6 m-0">${i}</h2>
-                    </div>
-                    <div class="card-body d-flex flex-column small py-1">
-                        <dl class="row row-cols-2 text-start mb-0">
-                            ${r?.map(e=>e.description&&e.description!=="-"?g`
-                                <div>
-                                    <dt class="text-uppercase text-navy mb-0">
-                                        ${e.heading}
-                                    </dt>
-                                    <dd class="pb-0">
-                                        ${E.textToHtml(e.description)}
-                                    </dd>
-                                </div>
-                                `:"")}
-                        </dl>
-                    </div>
-                </div>
-            </div>
-            ${s?g`
-                <div class="col-5 pe-0">
-                    <div class="card h-100 border">
-                        <div class="card-body d-flex flex-column text-start justify-content-center">
-                            <p class="small m-0">
-                                ${E.textToHtml(s)}
-                            </p>
+            <div class="col-10 row row-cols-1 row-cols-lg-2 pe-0">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header py-3 bg-primary text-bg-dark text-start">
+                            <h2 class="fs-6 m-0">${i}</h2>
+                        </div>
+                        <div class="card-body d-flex flex-column small py-1">
+                            <dl class="row row-cols-1 row-cols-md-2 text-start mb-0">
+                                ${r?.map(e=>e.description&&e.description!=="-"?g`
+                                    <div>
+                                        <dt class="text-uppercase text-navy mb-0">
+                                            ${e.heading}
+                                        </dt>
+                                        <dd class="pb-0">
+                                            ${E.textToHtml(e.description)}
+                                        </dd>
+                                    </div>
+                                    `:"")}
+                            </dl>
                         </div>
                     </div>
                 </div>
-                `:""}
+                ${s?g`
+                    <div class="col mt-2 mt-lg-0 pe-lg-0">
+                        <div class="card h-100 border">
+                            <div class="card-body d-flex flex-column text-start justify-content-center">
+                                <p class="small m-0">
+                                    ${E.textToHtml(s)}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    `:""}
+            </div>
         </div>
         `}renderSeparatorRow(){return g`
         <div class="row roadmap__row roadmap__row--seperator">
