@@ -1,4 +1,4 @@
-import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./feasibility-considerations-card-D7x72IoK.js";var U=Object.defineProperty,H=Object.getOwnPropertyDescriptor,O=(o,a,d,e)=>{for(var t=e>1?void 0:e?H(a,d):a,i=o.length-1,s;i>=0;i--)(s=o[i])&&(t=(e?s(a,d,t):s(t))||t);return e&&t&&U(a,d,t),t};let T=class extends w{constructor(){super(...arguments),this.items=[]}render(){return m`
+import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./feasibility-considerations-card-D7x72IoK.js";var U=Object.defineProperty,F=Object.getOwnPropertyDescriptor,O=(o,a,d,e)=>{for(var t=e>1?void 0:e?F(a,d):a,i=o.length-1,s;i>=0;i--)(s=o[i])&&(t=(e?s(a,d,t):s(t))||t);return e&&t&&U(a,d,t),t};let T=class extends w{constructor(){super(...arguments),this.items=[]}render(){return m`
         <div class="card mb-5">
             <div class="card-header py-4 bg-brown text-bg-dark">
                 <h2 class="fs-5 m-0">Project Team</h2>
@@ -16,7 +16,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
                 </dl>
             </div>
         </div>
-        `}};O([r({type:Array})],T.prototype,"items",2);T=O([S("project-team-card")],T);var F=Object.defineProperty,Q=Object.getOwnPropertyDescriptor,c=(o,a,d,e)=>{for(var t=e>1?void 0:e?Q(a,d):a,i=o.length-1,s;i>=0;i--)(s=o[i])&&(t=(e?s(a,d,t):s(t))||t);return e&&t&&F(a,d,t),t};let n=class extends w{renderRoadmapRow(o,a,d){return m`
+        `}};O([r({type:Array})],T.prototype,"items",2);T=O([S("project-team-card")],T);var H=Object.defineProperty,Q=Object.getOwnPropertyDescriptor,c=(o,a,d,e)=>{for(var t=e>1?void 0:e?Q(a,d):a,i=o.length-1,s;i>=0;i--)(s=o[i])&&(t=(e?s(a,d,t):s(t))||t);return e&&t&&H(a,d,t),t};let n=class extends w{renderRoadmapRow(o,a,d){return m`
         <div class="row roadmap__row">
             <div class="col-2 roadmap__circle">
             </div>
@@ -72,11 +72,11 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
 
                 ${this.renderSeparatorRow()}
 
-                ${this.renderRoadmapRow("Testing",[{heading:"Number Tested",description:this.testingNumberTested||"-"},{heading:"Testing Method",description:this.testingNumberTested||"-"},{heading:"Material Grade",description:this.testingMaterialGrade||"-"}],this.testingDescription)}
+                ${this.renderRoadmapRow("Testing",[{heading:"Number Tested",description:this.testingNumberTested||"-"},{heading:"Testing Method",description:this.testingTestingmethod||"-"},{heading:"Material Grade",description:this.testingMaterialGrade||"-"}],this.testingDescription)}
 
                 ${this.renderSeparatorRow()}
 
-                ${this.renderRoadmapRow("Refurbishment/Remanufacture",[{heading:"Tools & Equipment",description:this.refurbishmentRemanufactureToolsEquipment||"-"},{heading:"Time To Refurbish",description:this.refurbishmentRemanufactureTimeToRefurbish||"-"}],this.refurbishmentRemanufactureDescription)}
+                ${this.renderRoadmapRow("Refurbishment/Remanufacture",[{heading:"Tools & Equipment",description:this.refurbishmentRemanufactureToolsEquipment||"-"},{heading:"Time To Refurbish",description:this.refurbishmentRemanufactureTimeToRefurbish?`${this.refurbishmentRemanufactureTimeToRefurbish} days`:"-"}],this.refurbishmentRemanufactureDescription)}
 
                 ${this.renderSeparatorRow()}
 
@@ -126,7 +126,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
                         Material Pathways | % By Mass
                     </dt>
                     <dd>
-                        <img src="https://placehold.co/500" class="img-fluid rounded" alt="...">
+                        <img src="https://placehold.co/500x400?text=Material Flow Diagram" class="img-fluid rounded" alt="...">
                     </dd>
                     </div>
                 </dl>
@@ -135,7 +135,7 @@ import{n as r,t as S,G as w,x as m,D as G}from"./database-ByIzmupz.js";import"./
         `}};x([r({type:String})],R.prototype,"carbon",2);x([r({type:String})],R.prototype,"cost",2);x([r({type:String})],R.prototype,"programme",2);R=x([S("impact-card")],R);var J=Object.defineProperty,K=Object.getOwnPropertyDescriptor,y=(o,a,d,e)=>{for(var t=e>1?void 0:e?K(a,d):a,i=o.length-1,s;i>=0;i--)(s=o[i])&&(t=(e?s(a,d,t):s(t))||t);return e&&t&&J(a,d,t),t};let g=class extends w{render(){return m`
         <div class="card mb-5">
           <div class="card-header py-4 bg-secondary text-bg-dark">
-            <h2 class="fs-5 m-0">Deconstruction</h2>
+            <h2 class="fs-5 m-0">Deconstruction/Storage</h2>
           </div>
           <div class="card-body d-flex flex-column">
             <dl class="row row-cols-2 mt-2 mb-4">
