@@ -1,11 +1,11 @@
-import{n as a,t as f,G as x,x as y,D as I}from"./database-BccU47er.js";import"./feasibility-considerations-card-zy-1Ur4X.js";var D=Object.defineProperty,M=Object.getOwnPropertyDescriptor,b=(l,r,e,n)=>{for(var t=n>1?void 0:n?M(r,e):r,s=l.length-1,d;s>=0;s--)(d=l[s])&&(t=(n?d(r,e,t):d(t))||t);return n&&t&&D(r,e,t),t};let h=class extends x{render(){return y`
-        <div class="card position-relative mb-4">
+import{n as a,t as f,G as x,x as y,D as I}from"./database-tdLLSYSD.js";import"./feasibility-considerations-card-DdQhp1pG.js";var D=Object.defineProperty,M=Object.getOwnPropertyDescriptor,b=(l,r,e,n)=>{for(var t=n>1?void 0:n?M(r,e):r,s=l.length-1,d;s>=0;s--)(d=l[s])&&(t=(n?d(r,e,t):d(t))||t);return n&&t&&D(r,e,t),t};let h=class extends x{render(){return y`
+        <div class="card card--round-img-top-right position-relative mb-4">
             <div class="card-header py-3 bg-secondary text-bg-dark">
               <h4 class="fs-5 m-0">${this.name}</h2>
             </div>
-            ${this.imageUrl?y`<img class="rounded-circle position-absolute top-0 end-0 mt-4 me-5" src="${this.imageUrl}" alt="" width="100" height="100" />`:""}
-            <div class="card-body d-flex flex-column ">
-              <p class="card-text w-75">
+            <div class="card-body">
+              ${this.imageUrl?y`<img class="rounded-circle float-end" src="${this.imageUrl}" alt="" width="100" height="100" />`:""}
+              <p class="card-text">
                 ${this.description}
               </p>
             </div>

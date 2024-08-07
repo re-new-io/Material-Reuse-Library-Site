@@ -9,9 +9,9 @@
     <meta property="og:title" content="Material Reuse Library - re:new" />
     <meta property="og:description" content="">
     <meta property="og:image" content="" />
-  <script type="module" crossorigin src="/assets/index.hbs-gDcp--JQ.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/database-BccU47er.js">
-  <link rel="stylesheet" crossorigin href="/assets/database-D4xi8cpg.css">
+  <script type="module" crossorigin src="/assets/index.hbs-4Sy4JTiu.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/database-tdLLSYSD.js">
+  <link rel="stylesheet" crossorigin href="/assets/database-DiLRvE1Y.css">
   <link rel="stylesheet" crossorigin href="/assets/index-DX11ibHm.css">
 </head>
 
@@ -28,63 +28,71 @@
               <main-heading heading="Material Reuse Library" link="https://www.re-new.io/reuse-library"></main-heading>
             
               <section id="component-search" class="mx-5 mb-4 d-flex flex-wrap align-items-start">
-                <div class="input-group w-25 ms-4 mb-3 me-5">
-                    <input type="text" class="form-control" placeholder="Search for components..." disabled>
-                    <button class="btn btn-primary" type="button">
+                <div class="row gx-0 mx-4 w-100">
+                  <div class="col-12 col-md-6 col-lg-5 col-xl-3">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search for components..." disabled>
+                        <button class="btn btn-primary" type="button">
+                          <svg class="bi" width="14" height="14" fill="currentColor">
+                            <use xlink:href="/bootstrap-icons.svg#search" />
+                          </svg>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-5 col-xl-3 d-flex align-items-start">
+                    <button class="btn btn-primary ms-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#filters" aria-expanded="false" aria-controls="filters">
+                      Filter
                       <svg class="bi" width="14" height="14" fill="currentColor">
-                        <use xlink:href="/bootstrap-icons.svg#search" />
+                        <use xlink:href="/bootstrap-icons.svg#sliders" />
                       </svg>
                     </button>
-                </div>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#filters" aria-expanded="false" aria-controls="filters">
-                  Filter
-                  <svg class="bi" width="14" height="14" fill="currentColor">
-                    <use xlink:href="/bootstrap-icons.svg#sliders" />
-                  </svg>
-                </button>
-                <div class="ms-3 d-flex align-items-center" id="spinner">
-                  <div class="spinner-border me-2" role="status"></div>
-                  Loading...
-                </div>
-                <div class="collapse" id="filters">
-                  <div class="ms-4 flex-basis-100 d-flex">
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Discipline/Layer</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Category</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Component Type</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Reuse Type</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Case Study Status</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <select class="me-2" data-tom-select multiple disabled>
-                      <option value="">Project Age</option>
-                      <option value="Substructure">Substructure</option>
-                      <option value="Superstructure">Superstructure</option>
-                      <option value="Internal Finishes">Internal Finishes</option>
-                    </select>
-                    <button class="btn-close mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#filters"></button>
+                    <div class="ms-3 d-flex align-items-center" id="spinner">
+                      <div class="spinner-border me-2" role="status"></div>
+                      Loading...
+                    </div>
+                  </div>
+                  <div class="col-12 mt-2 collapse" id="filters">
+                    <div class="d-flex align-items-start">
+                      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6">
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Discipline/Layer</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Category</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Component Type</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Reuse Type</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Case Study Status</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                        <select class="col" data-tom-select multiple disabled>
+                          <option value="">Project Age</option>
+                          <option value="Substructure">Substructure</option>
+                          <option value="Superstructure">Superstructure</option>
+                          <option value="Internal Finishes">Internal Finishes</option>
+                        </select>
+                      </div>
+                      <button class="btn-close ms-2 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#filters"></button>
+                    </div>
                   </div>
                 </div>
               </section>

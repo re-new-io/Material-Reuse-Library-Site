@@ -1,4 +1,4 @@
-import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-BccU47er.js";import"./feasibility-considerations-card-zy-1Ur4X.js";var K=Object.defineProperty,V=Object.getOwnPropertyDescriptor,M=(i,r,s,e)=>{for(var t=e>1?void 0:e?V(r,s):r,n=i.length-1,o;n>=0;n--)(o=i[n])&&(t=(e?o(r,s,t):o(t))||t);return e&&t&&K(r,s,t),t};let $=class extends T{constructor(){super(...arguments),this.items=[]}render(){return g`
+import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-tdLLSYSD.js";import"./feasibility-considerations-card-DdQhp1pG.js";var K=Object.defineProperty,V=Object.getOwnPropertyDescriptor,M=(i,r,s,e)=>{for(var t=e>1?void 0:e?V(r,s):r,n=i.length-1,o;n>=0;n--)(o=i[n])&&(t=(e?o(r,s,t):o(t))||t);return e&&t&&K(r,s,t),t};let $=class extends T{constructor(){super(...arguments),this.items=[]}render(){return g`
         <div class="card mb-5">
             <div class="card-header py-4 bg-brown text-bg-dark">
                 <h2 class="fs-5 m-0">Project Team</h2>
@@ -179,19 +179,18 @@ import{n as a,t as x,G as T,x as g,o as z,D as J}from"./database-BccU47er.js";im
           </div>
         </div>
         `}};h([a({type:String})],y.prototype,"deconstructionMethod",2);h([a({type:String})],y.prototype,"storageType",2);h([a({type:String})],y.prototype,"storageDistance",2);h([a({type:String})],y.prototype,"storageProtectionNeeds",2);h([a({type:String})],y.prototype,"reclamationRate",2);h([a({type:String})],y.prototype,"quantityOfMaterial",2);h([a({type:String})],y.prototype,"marketExchangePlatform",2);y=h([x("deconstruction-card")],y);var ae=Object.defineProperty,re=Object.getOwnPropertyDescriptor,w=(i,r,s,e)=>{for(var t=e>1?void 0:e?re(r,s):r,n=i.length-1,o;n>=0;n--)(o=i[n])&&(t=(e?o(r,s,t):o(t))||t);return e&&t&&ae(r,s,t),t};let _=class extends T{render(){return g`
-        <div class="card position-relative mb-4">
-          <div class="card-header py-3 bg-primary text-bg-dark d-flex justify-content-end">
-            <div class="w-75 ps-3">
-              <h4 class="fs-5 m-0">${this.name}</h2>
-                <p class="card-text">
-                  ${[this.job,this.company].filter(i=>i).join(" | ")}
-                </p>
+        <div class="card card--round-img-top-left mb-4">
+          <div class="card-header position-relative py-3 bg-primary text-bg-dark d-flex">
+            <img class="rounded-circle position-absolute" src="${this.imageUrl||"/images/person.jpg"}" alt="" width="100" height="100" />
+            <div>
+              <h4 class="fs-5 m-0">${this.name}</h4>
+              <p class="card-text">
+                ${[this.job,this.company].filter(i=>i).join(" | ")}
+              </p>
             </div>
           </div>
-          <img class="rounded-circle position-absolute top-0 start-0 mt-3 ms-3" src="${this.imageUrl||"/images/person.jpg"}" alt=""
-            width="100" height="100" />
-          <div class="card-body d-flex flex-column ">
-            <p class="card-text mt-5">
+          <div class="card-body">
+            <p class="card-text mt-3">
               ${this.bio}
             </p>
           </div>
