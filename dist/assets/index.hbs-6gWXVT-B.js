@@ -1,4 +1,4 @@
-import{n as mt,t as pr,G as gr,x as nn,D as mr}from"./database-BFQwuwAc.js";var _r=Object.defineProperty,vr=Object.getOwnPropertyDescriptor,ct=(s,t,e,n)=>{for(var i=n>1?void 0:n?vr(t,e):t,o=s.length-1,r;o>=0;o--)(r=s[o])&&(i=(n?r(t,e,i):r(i))||i);return n&&i&&_r(t,e,i),i};let J=class extends gr{constructor(){super(...arguments),this.materials=[],this.includeUnapprovedData=!1}render(){return nn`
+import{n as mt,t as pr,G as gr,x as nn,D as mr}from"./database-DtE2maMk.js";var _r=Object.defineProperty,vr=Object.getOwnPropertyDescriptor,ct=(s,t,e,n)=>{for(var i=n>1?void 0:n?vr(t,e):t,o=s.length-1,r;o>=0;o--)(r=s[o])&&(i=(n?r(t,e,i):r(i))||i);return n&&i&&_r(t,e,i),i};let J=class extends gr{constructor(){super(...arguments),this.materials=[],this.includeUnapprovedData=!1}render(){return nn`
         <div class="card h-100">
             <a href="/component/?id=${this.componentId}${this.includeUnapprovedData?"&unapproved=1":null}" class="card-link h-100 d-flex flex-column">
                 <div class="card-img-top card-img-top--gradient bg-primary-subtle d-flex flex-column" style="background-image: url('${this.imageUrl}')">

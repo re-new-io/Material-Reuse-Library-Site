@@ -25,14 +25,14 @@
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */const pr={attribute:!0,type:String,converter:st,reflect:!1,hasChanged:ht},br=(c=pr,a,t)=>{const{kind:r,metadata:n}=t;let o=globalThis.litPropertyMetadata.get(n);if(o===void 0&&globalThis.litPropertyMetadata.set(n,o=new Map),o.set(t.name,c),r==="accessor"){const{name:e}=t;return{set(i){const s=a.get.call(this);a.set.call(this,i),this.requestUpdate(e,s,c)},init(i){return i!==void 0&&this.P(e,void 0,c),i}}}if(r==="setter"){const{name:e}=t;return function(i){const s=this[e];a.call(this,i),this.requestUpdate(e,s,c)}}throw Error("Unsupported decorator location: "+r)};function N(c){return(a,t)=>typeof t=="object"?br(c,a,t):((r,n,o)=>{const e=n.hasOwnProperty(o);return n.constructor.createProperty(o,e?{...r,wrapped:!0}:r),e?Object.getOwnPropertyDescriptor(n,o):void 0})(c,a,t)}var cr=Object.defineProperty,gr=Object.getOwnPropertyDescriptor,et=(c,a,t,r)=>{for(var n=r>1?void 0:r?gr(a,t):a,o=c.length-1,e;o>=0;o--)(e=c[o])&&(n=(r?e(a,t,n):e(n))||n);return r&&n&&cr(a,t,n),n};let Y=class extends Mt{constructor(){super(...arguments),this.includeUnapprovedData=!1}render(){return ct`
-        <div class="mb-5 d-flex flex-wrap align-items-start">
+        <div class="mb-3 mb-md-5 d-flex flex-wrap align-items-start">
             <a class="btn btn-primary btn-square-icon me-4" href="${this.link}${this.includeUnapprovedData?`${this.link?.includes("?")?"&":"?"}unapproved=1`:null}" aria-label="Back to previous page">
                 <svg class="bi" width="24" height="24" fill="currentColor">
                     <use xlink:href="/bootstrap-icons.svg#arrow-left" />
                 </svg>
             </a>
             <h1 class="mb-0">${this.heading}</h1>
-            <div class="ms-4 align-self-center">
+            <div class="ms-5 ms-md-4 ps-4 ps-md-0 align-self-center">
                 <slot></slot>
             </div>
             ${this.subHeading?ct`
