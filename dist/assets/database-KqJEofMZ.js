@@ -26,7 +26,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */const pr={attribute:!0,type:String,converter:lt,reflect:!1,hasChanged:ht},br=(c=pr,e,t)=>{const{kind:r,metadata:i}=t;let o=globalThis.litPropertyMetadata.get(i);if(o===void 0&&globalThis.litPropertyMetadata.set(i,o=new Map),o.set(t.name,c),r==="accessor"){const{name:a}=t;return{set(n){const s=e.get.call(this);e.set.call(this,n),this.requestUpdate(a,s,c)},init(n){return n!==void 0&&this.P(a,void 0,c),n}}}if(r==="setter"){const{name:a}=t;return function(n){const s=this[a];e.call(this,n),this.requestUpdate(a,s,c)}}throw Error("Unsupported decorator location: "+r)};function M(c){return(e,t)=>typeof t=="object"?br(c,e,t):((r,i,o)=>{const a=i.hasOwnProperty(o);return i.constructor.createProperty(o,a?{...r,wrapped:!0}:r),a?Object.getOwnPropertyDescriptor(i,o):void 0})(c,e,t)}var cr=Object.defineProperty,gr=Object.getOwnPropertyDescriptor,J=(c,e,t,r)=>{for(var i=r>1?void 0:r?gr(e,t):e,o=c.length-1,a;o>=0;o--)(a=c[o])&&(i=(r?a(e,t,i):a(i))||i);return r&&i&&cr(e,t,i),i};let H=class extends Mt{constructor(){super(...arguments),this.includeUnapprovedData=!1}render(){return st`
         <div class="mb-3 mb-md-5 d-flex flex-column flex-md-row align-items-md-start">
-            <div class="d-flex flex-wrap align-items-start">
+            <div class="d-flex flex-wrap align-items-start pe-md-2">
                 <a class="btn btn-primary btn-square-icon me-4" href="${this.link}${this.includeUnapprovedData?`${this.link?.includes("?")?"&":"?"}unapproved=1`:null}" aria-label="Back to previous page">
                     <svg class="bi" width="24" height="24" fill="currentColor">
                         <use xlink:href="/bootstrap-icons.svg#arrow-left" />
@@ -41,7 +41,7 @@
                         <h5 class="ms-4 mt-2">${this.subHeading}</h5>
                     </div>`:""}
             </div>
-            <div class="ms-md-2 me-md-5 text-center text-md-end">
+            <div class="ms-md-auto me-md-5 text-center text-md-end">
                 ${this.logoImage?st`<img src="${this.logoImage}" class="w-auto mh-100px" alt="">`:""}
             </div>
         </div>
