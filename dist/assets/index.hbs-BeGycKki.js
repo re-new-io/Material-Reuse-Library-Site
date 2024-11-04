@@ -1,4 +1,4 @@
-import{n as o,t as v,G as _,x as p,o as S,D as M}from"./icon-badge-Dqw5MDS8.js";import"./feasibility-considerations-card-C6NS6L7q.js";var ee=Object.defineProperty,te=Object.getOwnPropertyDescriptor,L=(a,i,e,r)=>{for(var t=r>1?void 0:r?te(i,e):i,n=a.length-1,s;n>=0;n--)(s=a[n])&&(t=(r?s(i,e,t):s(t))||t);return r&&t&&ee(i,e,t),t};let C=class extends _{render(){return p`
+import{n as o,t as v,G as _,x as p,o as S,D as M}from"./icon-badge-Dw_Sbpr1.js";import"./feasibility-considerations-card-DfYJAwei.js";var ee=Object.defineProperty,te=Object.getOwnPropertyDescriptor,L=(a,i,e,r)=>{for(var t=r>1?void 0:r?te(i,e):i,n=a.length-1,s;n>=0;n--)(s=a[n])&&(t=(r?s(i,e,t):s(t))||t);return r&&t&&ee(i,e,t),t};let C=class extends _{render(){return p`
         <div class="card card--round-img-top-right position-relative mb-4">
             <div class="card-header py-3 bg-secondary text-bg-dark">
               <h4 class="fs-5 m-0">${this.name}</h2>
