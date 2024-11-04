@@ -1,12 +1,12 @@
-import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1.js";import"./feasibility-considerations-card-DfYJAwei.js";var Fo=Object.defineProperty,Io=Object.getOwnPropertyDescriptor,An=(i,t,e,s)=>{for(var n=s>1?void 0:s?Io(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&Fo(t,e,n),n};let Pi=class extends Te{constructor(){super(...arguments),this.items=[]}render(){return rt`
+import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-BCxSZBFt.js";import"./feasibility-considerations-card-DSgKsElR.js";var Fo=Object.defineProperty,Io=Object.getOwnPropertyDescriptor,An=(i,t,e,s)=>{for(var n=s>1?void 0:s?Io(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&Fo(t,e,n),n};let Pi=class extends Te{constructor(){super(...arguments),this.items=[]}render(){return rt`
         <div class="card mb-5">
             <div class="card-header py-4 bg-brown text-bg-dark">
-                <h2 class="fs-5 m-0">Project Team</h2>
+                <h2 class="fs-4 fw-normal m-0">Project Team</h2>
             </div>
             <div class="card-body d-flex flex-column">
                 <dl class="row row-cols-2 mt-2 mb-2">
                     ${this.items?.map(i=>rt`<div class="mb-2">
-                                <dt class="text-uppercase text-navy">
+                                <dt class="fs-7 text-uppercase text-navy">
                                     ${i.heading}
                                 </dt>
                                 <dd>
@@ -96,12 +96,12 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
 `)):Array.isArray(s)?e.push.apply(e,s):A(e)||t.unshift(""+s)}return t}function ki(i){return!i||["min","max"].indexOf(i)===-1?"max":i}const kt=i=>i!==void 0;function od(i,t){const e=new Set(t.map(r=>r.to)),s=new Set(t.map(r=>r.from)),n=new Set([...i.keys()]);let o=0;for(;n.size;){const r=rd([...n],e);for(const a of r){const l=i.get(a);kt(l.x)||(l.x=o),n.delete(a)}n.size&&(e.clear(),t.filter(a=>n.has(a.from)).forEach(a=>e.add(a.to)),o++)}return[...i.keys()].filter(r=>!s.has(r)).forEach(r=>{const a=i.get(r);a.column||(a.x=o)}),[...i.values()].reduce((r,a)=>Math.max(r,a.x),0)}function rd(i,t){const e=i.filter(s=>!t.has(s));return e.length?e:i.slice(0,1)}const ad=(i,t)=>i.x!==t.x?i.x-t.x:i.y-t.y;let Ke=-1;function ld(){return Ke=Ke<100?Ke+1:0,Ke}function Bi(i,t,e=ld()){let s=0;for(const n of i)n.node._visited!==e&&(n.node._visited=e,s+=n.node[t].length+Bi(n.node[t],t,e));return s}const Ro=i=>(t,e)=>Bi(t.node[i],i)-Bi(e.node[i],i)||t.node[i].length-e.node[i].length;function ns(i,t){i.from.sort(Ro("from"));for(const e of i.from){const s=e.node;kt(s.y)||(s.y=t,ns(s,t)),t=Math.max(s.y+s.out,t)}return t}function Nt(i,t){i.to.sort(Ro("to"));for(const e of i.to){const s=e.node;kt(s.y)||(s.y=t,Nt(s,t));const n=Math.max(s.in,s.out);t=Math.max(s.y+n,t)}return t}function ue(i,t){return kt(i.y)?i.y:(i.y=t,t)}function cd(i,t){const e=i.filter(h=>h.x===0),s=i.filter(h=>h.x===t),n=e.filter(h=>!kt(h.y)),o=s.filter(h=>!kt(h.y)),r=i.filter(h=>h.x>0&&h.x<t&&!kt(h.y));let a=e.reduce((h,d)=>Math.max(h,d.y+d.out||0),0),l=s.reduce((h,d)=>Math.max(h,d.y+d.in||0),0),c=0;return a>=l?(n.forEach(h=>{a=ue(h,a),a=Math.max(a+h.out,Nt(h,a))}),o.forEach(h=>{l=ue(h,l),l=Math.max(l+h.in,Nt(h,l))})):(o.forEach(h=>{l=ue(h,l),l=Math.max(l+h.in,Nt(h,l))}),n.forEach(h=>{a=ue(h,a),a=Math.max(a+h.out,Nt(h,a))})),r.forEach(h=>{let d=i.filter(u=>u.x===h.x&&kt(u.y)).reduce((u,f)=>Math.max(u,f.y+Math.max(f.in,f.out)),0);d=ue(h,d),d=Math.max(d+h.in,ns(h,d)),d=Math.max(d+h.out,Nt(h,d)),c=Math.max(c,d)}),Math.max(a,l,c)}function hd(i,t){i.sort((r,a)=>Math.max(a.in,a.out)-Math.max(r.in,r.out));const e=i[0];e.y=0;const s=ns(e,0),n=Nt(e,0),o=cd(i,t);return Math.max(s,n,o)}function dd(i,t){let e=0,s=0;for(let n=0;n<=t;n++){let o=s;const r=i.filter(a=>a.x===n).sort((a,l)=>a.priority-l.priority);s=r.length&&r[0].to.filter(a=>a.node.x>n+1).reduce((a,l)=>a+l.flow,0)||0;for(const a of r)a.y=o,o+=Math.max(a.out,a.in);e=Math.max(o,e)}return e}function ud(i,t){let e=1,s=0,n=0,o=0;const r=[];i.sort(ad);for(const a of i){if(a.y){if(a.x===0)r.push(a.y);else{for(s!==a.x&&(s=a.x,n=0),e=n+1;e<r.length&&!(r[e]>a.y);e++);n=e}a.y+=e*t,e++}o=Math.max(o,a.y+Math.max(a.in,a.out))}return o}function fd(i,t){i.forEach(e=>{const s=Math[t](e.in||e.out,e.out||e.in),n=s<e.in,o=s<e.out;let r=0,a=e.from.length;e.from.sort((l,c)=>l.node.y+l.node.out/2-(c.node.y+c.node.out/2)).forEach((l,c)=>{n?l.addY=c*(s-l.flow)/(a-1):(l.addY=r,r+=l.flow)}),r=0,a=e.to.length,e.to.sort((l,c)=>l.node.y+l.node.in/2-(c.node.y+c.node.in/2)).forEach((l,c)=>{o?l.addY=c*(s-l.flow)/(a-1):(l.addY=r,r+=l.flow)})})}function gd(i,t,e,s){const n=[...i.values()],o=od(i,t),a=(e?dd(n,o):hd(n,o))*.03,l=ud(n,a);return fd(n,s),{maxX:o,maxY:l}}function pd(i){const t=new Map;for(let s=0;s<i.length;s++){const{from:n,to:o,flow:r}=i[s];if(!t.has(n))t.set(n,{key:n,in:0,out:r,from:[],to:[{key:o,flow:r,index:s}]});else{const a=t.get(n);a.out+=r,a.to.push({key:o,flow:r,index:s})}if(!t.has(o))t.set(o,{key:o,in:r,out:0,from:[{key:n,flow:r,index:s}],to:[]});else{const a=t.get(o);a.in+=r,a.from.push({key:n,flow:r,index:s})}}const e=(s,n)=>n.flow-s.flow;return[...t.values()].forEach(s=>{s.from=s.from.sort(e),s.from.forEach(n=>{n.node=t.get(n.key)}),s.to=s.to.sort(e),s.to.forEach(n=>{n.node=t.get(n.key)})}),t}function Tn(i,t,e){for(const s of i)if(s.key===t&&s.index===e)return s.addY;return 0}class ui extends vt{parseObjectData(t,e,s,n){const{from:o="from",to:r="to",flow:a="flow"}=this.options.parsing,l=e.map(({[o]:_,[r]:S,[a]:v})=>({from:_,to:S,flow:v})),{xScale:c,yScale:h}=t,d=[],u=this._nodes=pd(l),{column:f,priority:g,size:p}=this.getDataset();if(g)for(const _ of u.values())_.key in g&&(_.priority=g[_.key]);if(f)for(const _ of u.values())_.key in f&&(_.column=!0,_.x=f[_.key]);const{maxX:m,maxY:b}=gd(u,l,!!g,ki(p));this._maxX=m,this._maxY=b;for(let _=0,S=l.length;_<S;++_){const v=l[_],x=u.get(v.from),M=u.get(v.to),y=x.y+Tn(x.to,v.to,_),w=M.y+Tn(M.from,v.from,_);d.push({x:c.parse(x.x,_),y:h.parse(y,_),_custom:{from:x,to:M,x:c.parse(M.x,_),y:h.parse(w,_),height:h.parse(v.flow,_)}})}return d.slice(s,s+n)}getMinMax(t){return{min:0,max:t===this._cachedMeta.xScale?this._maxX:this._maxY}}update(t){const{data:e}=this._cachedMeta;this.updateElements(e,0,e.length,t)}updateElements(t,e,s,n){const{xScale:o,yScale:r}=this._cachedMeta,a=this.resolveDataElementOptions(e,n),l=this.getSharedOptions(n,t[e],a),c=this.getDataset(),h=P(c.borderWidth,1)/2+.5,d=P(c.nodeWidth,10);for(let u=e;u<e+s;u++){const f=this.getParsed(u),g=f._custom,p=r.getPixelForValue(f.y);this.updateElement(t[u],u,{x:o.getPixelForValue(f.x)+d+h,y:p,x2:o.getPixelForValue(g.x)-h,y2:r.getPixelForValue(g.y),from:g.from,to:g.to,progress:n==="reset"?0:1,height:Math.abs(r.getPixelForValue(f.y+g.height)-p),options:this.resolveDataElementOptions(u,n)},n)}this.updateSharedOptions(l,n)}_drawLabels(){const t=this._ctx,e=this._nodes||new Map,s=this.getDataset(),n=ki(s.size),o=P(s.borderWidth,1),r=P(s.nodeWidth,10),a=s.labels,{xScale:l,yScale:c}=this._cachedMeta;t.save();const h=this.chart.chartArea;for(const d of e.values()){const u=l.getPixelForValue(d.x),f=c.getPixelForValue(d.y),g=Math[n](d.in||d.out,d.out||d.in),p=Math.abs(c.getPixelForValue(d.y+g)-f),m=a&&a[d.key]||d.key;let b=u;t.fillStyle=s.color||"black",t.textBaseline="middle",u<h.width/2?(t.textAlign="left",b+=r+o+4):(t.textAlign="right",b-=o+4),this._drawLabel(m,f,p,t,b)}t.restore()}_drawLabel(t,e,s,n,o){const r=G(this.options.font,this.chart.options.font),a=A(t)?[]:nd(t),l=a.length,c=e+s/2,h=r.lineHeight,d=P(this.options.padding,h/2);if(n.font=r.string,l>1){const u=c-h*l/2+d;for(let f=0;f<l;f++)n.fillText(a[f],o,u+f*h)}else n.fillText(t,o,c)}_drawNodes(){const t=this._ctx,e=this._nodes||new Map,s=this.getDataset(),n=ki(s.size),{xScale:o,yScale:r}=this._cachedMeta,a=P(s.borderWidth,1),l=P(s.nodeWidth,10);t.save(),t.strokeStyle=s.borderColor||"black",t.lineWidth=a;for(const c of e.values()){t.fillStyle=c.color;const h=o.getPixelForValue(c.x),d=r.getPixelForValue(c.y),u=Math[n](c.in||c.out,c.out||c.in),f=Math.abs(r.getPixelForValue(c.y+u)-d);a&&t.strokeRect(h,d,l,f),t.fillRect(h,d,l,f)}t.restore()}draw(){const t=this._ctx,e=this.getMeta().data||[],s=[];for(let n=0,o=e.length;n<o;++n){const r=e[n];r.from.color=r.options.colorFrom,r.to.color=r.options.colorTo,r.active&&s.push(r)}for(const n of s)n.from.color=n.options.colorFrom,n.to.color=n.options.colorTo;this._drawNodes();for(let n=0,o=e.length;n<o;++n)e[n].draw(t);this._drawLabels()}}ui.id="sankey";ui.defaults={dataElementType:"flow",animations:{numbers:{type:"number",properties:["x","y","x2","y2","height"]},progress:{easing:"linear",duration:i=>i.type==="data"?(i.parsed._custom.x-i.parsed.x)*200:void 0,delay:i=>i.type==="data"?i.parsed.x*500+i.dataIndex*20:void 0},colors:{type:"color",properties:["colorFrom","colorTo"]}},transitions:{hide:{animations:{colors:{type:"color",properties:["colorFrom","colorTo"],to:"transparent"}}},show:{animations:{colors:{type:"color",properties:["colorFrom","colorTo"],from:"transparent"}}}}};ui.overrides={interaction:{mode:"nearest",intersect:!0},datasets:{clip:!1,parsing:!0},plugins:{tooltip:{callbacks:{title(){return""},label(i){const t=i.dataset.data[i.dataIndex];return t.from+" -> "+t.to+": "+t.flow}}},legend:{display:!1}},scales:{x:{type:"linear",bounds:"data",display:!1,min:0,offset:!1},y:{type:"linear",bounds:"data",display:!1,min:0,reverse:!0,offset:!1}},layout:{padding:{top:3,left:3,right:13,bottom:3}}};const Rn=(i,t,e,s)=>i<e?{cp1:{x:i+(e-i)/3*2,y:t},cp2:{x:i+(e-i)/3,y:s}}:{cp1:{x:i-(i-e)/3,y:0},cp2:{x:e+(i-e)/3,y:0}},Zt=(i,t,e)=>({x:i.x+e*(t.x-i.x),y:i.y+e*(t.y-i.y)});function md(i,{x:t,x2:e,options:s}){let n;s.colorMode==="from"?n=Qt(s.colorFrom).alpha(s.alpha).rgbString():s.colorMode==="to"?n=Qt(s.colorTo).alpha(s.alpha).rgbString():(n=i.createLinearGradient(t,0,e,0),n.addColorStop(0,Qt(s.colorFrom).alpha(s.alpha).rgbString()),n.addColorStop(1,Qt(s.colorTo).alpha(s.alpha).rgbString())),i.fillStyle=n,i.strokeStyle=n,i.lineWidth=.5}class os extends ut{constructor(t){super(),this.options=void 0,this.x=void 0,this.y=void 0,this.x2=void 0,this.y2=void 0,this.height=void 0,t&&Object.assign(this,t)}draw(t){const e=this,{x:s,x2:n,y:o,y2:r,height:a,progress:l}=e,{cp1:c,cp2:h}=Rn(s,o,n,r);l!==0&&(t.save(),l<1&&(t.beginPath(),t.rect(s,Math.min(o,r),(n-s)*l+1,Math.abs(r-o)+a+1),t.clip()),md(t,e),t.beginPath(),t.moveTo(s,o),t.bezierCurveTo(c.x,c.y,h.x,h.y,n,r),t.lineTo(n,r+a),t.bezierCurveTo(h.x,h.y+a,c.x,c.y+a,s,o+a),t.lineTo(s,o),t.stroke(),t.closePath(),t.fill(),t.restore())}inRange(t,e,s){const{x:n,y:o,x2:r,y2:a,height:l}=this.getProps(["x","y","x2","y2","height"],s);if(t<n||t>r)return!1;const{cp1:c,cp2:h}=Rn(n,o,r,a),d=(t-n)/(r-n),u={x:n,y:o},f={x:r,y:a},g=Zt(u,c,d),p=Zt(c,h,d),m=Zt(h,f,d),b=Zt(g,p,d),_=Zt(p,m,d),S=Zt(b,_,d).y;return e>=S&&e<=S+l}inXRange(t,e){const{x:s,x2:n}=this.getProps(["x","x2"],e);return t>=s&&t<=n}inYRange(t,e){const{y:s,y2:n,height:o}=this.getProps(["y","y2","height"],e),r=Math.min(s,n),a=Math.max(s,n)+o;return t>=r&&t<=a}getCenterPoint(t){const{x:e,y:s,x2:n,y2:o,height:r}=this.getProps(["x","y","x2","y2","height"],t);return{x:(e+n)/2,y:(s+o+r)/2}}tooltipPosition(t){return this.getCenterPoint(t)}getRange(t){return t==="x"?this.width/2:this.height/2}}os.id="flow";os.defaults={colorFrom:"red",colorTo:"green",colorMode:"gradient",alpha:.5,hoverColorFrom:(i,t)=>ye(t.colorFrom),hoverColorTo:(i,t)=>ye(t.colorTo)};var bd=Object.defineProperty,_d=Object.getOwnPropertyDescriptor,se=(i,t,e,s)=>{for(var n=s>1?void 0:s?_d(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&bd(t,e,n),n};es.register(...sd,ui,os);let jt=class extends Te{constructor(){super(...arguments),this.hideChart=!0}updated(i){i.has("materialFlows")&&this.onMaterialFlowsChanged()}onMaterialFlowsChanged(){const i=this.shadowRoot?.getElementById("impact-chart");if(!i)console.error('Canvas element with id "impact-chart" not found.');else{const t=i.getContext("2d");if(!t)console.error("Failed to get 2D context from canvas.");else{if(this.materialFlows?.filter(e=>e.value).length===0){this.hideChart=!0;return}this.hideChart=!1,new es(t,{type:"sankey",data:{datasets:[{data:this.materialFlows?.filter(e=>e.value),colorFrom:()=>"#02B8B7",colorTo:()=>"#02B8B7"}]},options:{parsing:{from:"source",to:"destination",flow:"value"},plugins:{tooltip:{enabled:!1}}}})}}}render(){return rt`
         <div class="card mb-5">
             <div class="card-header py-3 bg-navy text-bg-dark">
-            <h2 class="fs-5 m-0">Impact</h2>
+            <h2 class="fs-4 fw-normal m-0">Impact</h2>
             </div>
             <div class="card-body d-flex flex-column">
             <dl class="row row-cols-2 mt-2">
                 <div>
-                <dt class="text-uppercase text-navy">
+                <dt class="fs-7 text-uppercase text-navy">
                     Carbon
                 </dt>
                 <dd class="d-flex justify-content-between">
@@ -110,7 +110,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
                 </div>
                 <div>
-                <dt class="text-uppercase text-navy">
+                <dt class="fs-7 text-uppercase text-navy">
                     Cost
                 </dt>
                 <dd class="d-flex justify-content-between">
@@ -119,7 +119,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
                 </div>
                 <div>
-                <dt class="text-uppercase text-navy">
+                <dt class="fs-7 text-uppercase text-navy">
                     Programme
                 </dt>
                 <dd class="d-flex justify-content-between">
@@ -132,7 +132,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
             <div class="card-body d-flex flex-column pt-0 ${this.hideChart?"d-none":""}">
                 <dl class="row row-cols-1">
                     <div>
-                    <dt class="text-uppercase text-navy">
+                    <dt class="fs-7 text-uppercase text-navy">
                         Material Pathways | % By Mass
                     </dt>
                     <dd>
@@ -145,12 +145,12 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
         `}};se([C({type:String})],jt.prototype,"carbon",2);se([C({type:Number})],jt.prototype,"cost",2);se([C({type:String})],jt.prototype,"programme",2);se([C({type:Array})],jt.prototype,"materialFlows",2);se([C({type:Boolean})],jt.prototype,"hideChart",2);jt=se([Oe("impact-card")],jt);var xd=Object.defineProperty,yd=Object.getOwnPropertyDescriptor,Tt=(i,t,e,s)=>{for(var n=s>1?void 0:s?yd(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&xd(t,e,n),n};let yt=class extends Te{render(){return rt`
         <div class="card mb-5">
           <div class="card-header py-4 bg-secondary text-bg-dark">
-            <h2 class="fs-5 m-0">Deconstruction/Storage</h2>
+            <h2 class="fs-4 fw-normal m-0">Deconstruction/Storage</h2>
           </div>
           <div class="card-body d-flex flex-column">
-            <dl class="row row-cols-2 mt-2 mb-4">
+            <dl class="row row-cols-2 mb-4">
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Method
                 </dt>
                 <dd>
@@ -158,7 +158,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Storage Type
                 </dt>
                 <dd>
@@ -166,7 +166,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Storage Distance From Site
                 </dt>
                 <dd>
@@ -174,7 +174,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Storage Protection Needs
                 </dt>
                 <dd>
@@ -182,7 +182,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Reclamation Rate
                 </dt>
                 <dd>
@@ -190,7 +190,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Quantity Of Material
                 </dt>
                 <dd>
@@ -198,7 +198,7 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
                 </dd>
               </div>
               <div>
-                <dt class="text-uppercase text-brown">
+                <dt class="fs-7 text-uppercase text-brown">
                   Marketplace/Exchange Platform
                 </dt>
                 <dd>
@@ -211,8 +211,8 @@ import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-Dw_Sbpr1
         <div class="card card--round-img-top-left mb-4">
           <div class="card-header position-relative py-3 bg-primary text-bg-dark d-flex">
             <img class="rounded-circle position-absolute" src="${this.imageUrl||"/images/person.jpg"}" alt="" width="100" height="100" />
-            <div>
-              <h4 class="fs-5 m-0">${this.name}</h4>
+            <div class="align-self-center">
+              <h4 class="fs-4 fw-normal m-0">${this.name}</h4>
               <p class="card-text">
                 ${[this.job,this.company].filter(i=>i).join(" | ")}
               </p>
