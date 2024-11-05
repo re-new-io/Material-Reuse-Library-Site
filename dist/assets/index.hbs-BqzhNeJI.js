@@ -1,5 +1,5 @@
-import{G as Ve,x as fe,n as V,t as Me,D as je}from"./icon-badge-BCxSZBFt.js";var Re=Object.defineProperty,He=Object.getOwnPropertyDescriptor,D=(i,e,t,s)=>{for(var n=s>1?void 0:s?He(e,t):e,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Re(e,t,n),n};let P=class extends Ve{constructor(){super(...arguments),this.isComponent=!1,this.materials=[],this.includeUnapprovedData=!1}render(){return fe`
-        <div class="card h-100">
+import{G as Ve,x as fe,n as V,t as Me,D as je}from"./icon-badge-N2SyfdDW.js";var Re=Object.defineProperty,He=Object.getOwnPropertyDescriptor,D=(i,e,t,s)=>{for(var n=s>1?void 0:s?He(e,t):e,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Re(e,t,n),n};let P=class extends Ve{constructor(){super(...arguments),this.isComponent=!1,this.materials=[],this.includeUnapprovedData=!1}render(){return fe`
+        <div class="card h-100 ratio-lg ratio-lg-1x1">
             <a href="/component-material/?id=${this.componentMaterialId}${this.includeUnapprovedData?"&unapproved=1":null}" class="card-link h-100 d-flex flex-column">
                 <div class="card-img-top card-img-top--gradient bg-primary-subtle d-flex flex-column" style="background-image: url('${this.imageUrl}')">
                 <div class="d-flex">
