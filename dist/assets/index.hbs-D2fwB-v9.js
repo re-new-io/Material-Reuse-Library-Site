@@ -1,4 +1,4 @@
-import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-C4avDctd.js";import"./feasibility-considerations-card-l4UEH30P.js";var Fo=Object.defineProperty,Io=Object.getOwnPropertyDescriptor,An=(i,t,e,s)=>{for(var n=s>1?void 0:s?Io(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&Fo(t,e,n),n};let Pi=class extends Te{constructor(){super(...arguments),this.items=[]}render(){return rt`
+import{n as C,t as Oe,G as Te,x as rt,o as Ao,D as Lo}from"./icon-badge-B-MoYZer.js";import"./feasibility-considerations-card-Dxj1s09e.js";var Fo=Object.defineProperty,Io=Object.getOwnPropertyDescriptor,An=(i,t,e,s)=>{for(var n=s>1?void 0:s?Io(t,e):t,o=i.length-1,r;o>=0;o--)(r=i[o])&&(n=(s?r(t,e,n):r(n))||n);return s&&n&&Fo(t,e,n),n};let Pi=class extends Te{constructor(){super(...arguments),this.items=[]}render(){return rt`
         <div class="card mb-5">
             <div class="card-header py-4 bg-brown text-bg-dark">
                 <h2 class="fs-4 fw-normal m-0">Project Team</h2>
