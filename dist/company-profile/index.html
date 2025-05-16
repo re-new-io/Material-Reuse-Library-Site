@@ -12,7 +12,13 @@
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-  <script type="module" crossorigin src="/assets/main-BFjwW7uW.js"></script>
+  <script type="module" crossorigin src="/assets/index.hbs-CFW6bDM2.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BFjwW7uW.js">
+  <link rel="modulepreload" crossorigin href="/assets/tags-list-Bj3LNUkw.js">
+  <link rel="modulepreload" crossorigin href="/assets/project-example-card-BNUFkzCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/icon-badge-Bk4A7JFt.js">
+  <link rel="modulepreload" crossorigin href="/assets/component-material-card-Cosg3dQB.js">
+  <link rel="modulepreload" crossorigin href="/assets/square-image-card-MlDb2Qa3.js">
   <link rel="stylesheet" crossorigin href="/assets/main-Bj8-kVmX.css">
 </head>
 
@@ -33,44 +39,45 @@
         </header>        
         <main class="flex-fill px-0 py-5">
             <section class="mx-4">
-              <main-heading heading="Project Example" link="/"> </main-heading>
+              <main-heading heading="Company Profiles" link="/" breadcrumb=""></main-heading>
             
               <section class="mx-md-5 mb-4">
-                <div class="row ms-md-3">
+                <div class="row ms-md-3 gx-5">
                   <!-- Left Column -->
                   <div class="col-12 col-lg-3 mx-0 mb-5 mb-lg-0 px-0 row row-cols-1 row-cols-md-2 row-cols-lg-1 d-lg-flex flex-lg-column align-items-start">
-                    
-                    
-                    <project-team-card></project-team-card>
+                    <about-card></about-card>
             
-                    <tags-list name="Tags" heading="Tags" class="d-block mt-5 mt-md-0 mt-lg-5"></tags-list>
+                    
+                      <div class="mt-4 pt-3 primary">
+                    <!-- The component will be added here by JavaScript -->
+                  </div>
                   </div>
             
                   <!-- Middle Column -->
-                  <div class="col-12 col-lg-6 mb-5 mb-lg-0 d-flex flex-column">
-            
-                    <project-information-card></project-information-card>
-            
-            
+                  <div class="col-12 col-lg-6 mb-5 mb-xl-0">
+                    <new-impact-card heading="Impact Metrics"></new-impact-card>
                   </div>
+            
                   <!-- Right Column -->
-                  <div class="col-12 col-lg-3 d-flex flex-column">
-                    <impact-card></impact-card>
-                    
+                  <div class="col-12 col-lg-3">
+                    <section id="services" class="mb-5">
+                      <tags-list></tags-list>
+                    </section>
             
-                    <deconstruction-card></deconstruction-card>
-            
-                    <dive-deeper-card></dive-deeper-card>
-            
+                    <section id="project-examples" class="mb-5">
+                      <h2 class="fs-6 text-uppercase">Project Examples</h2>
+                      <div id="project-examples-container" class="mt-3">
+                      </div>
+                    </section>
+                  </div>
+                </div>
               </section>
-            
             </section>
-            
         </main>
         <footer class="w-100 px-4 py-2 text-center">
             Copyright 2025 - <a href="https://www.re-new.io/">RE-NEW.IO LIMITED</a>
         </footer>
-    </div>
+    </div>
     <script defer data-domain="library.re-new.io" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {

@@ -1,0 +1,4 @@
+import{n as p,t as h,G as y,x as o}from"./main-BFjwW7uW.js";var d=Object.defineProperty,u=Object.getOwnPropertyDescriptor,r=(s,a,n,l)=>{for(var t=l>1?void 0:l?u(a,n):a,g=s.length-1,i;g>=0;g--)(i=s[g])&&(t=(l?i(a,n,t):i(t))||t);return l&&t&&d(a,n,t),t};let e=class extends y{constructor(){super(...arguments),this.tags=[],this.lightBackground=!1,this.tagStyle="dark"}render(){return o`
+        <h3 class="fs-6 text-uppercase">${this.heading}</h3>
+        ${this.tags?.map(s=>this.tagStyle==="light"?o`<span class="badge rounded-pill fs-6 bg-light text-dark mt-2 me-2">${s}</span>`:o`<span class="badge rounded-pill fs-6 bg-${this.tagStyle} text-white mt-2 me-2">${s}</span>`)}
+        `}};r([p({type:String})],e.prototype,"heading",2);r([p({type:Array})],e.prototype,"tags",2);r([p({type:Boolean})],e.prototype,"lightBackground",2);r([p({type:String})],e.prototype,"tagStyle",2);e=r([h("tags-list")],e);

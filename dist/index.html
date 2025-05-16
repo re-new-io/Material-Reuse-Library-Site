@@ -9,10 +9,17 @@
     <meta property="og:title" content="Material Reuse Library - re:new" />
     <meta property="og:description" content="">
     <meta property="og:image" content="" />
-  <script type="module" crossorigin src="/assets/index.hbs-K6QoffxT.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/icon-badge-BVoFlI-S.js">
-  <link rel="stylesheet" crossorigin href="/assets/icon-badge-JrYtUcsX.css">
-  <link rel="stylesheet" crossorigin href="/assets/index-DX11ibHm.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script type="module" crossorigin src="/assets/index.hbs-C562TDB7.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BFjwW7uW.js">
+  <link rel="modulepreload" crossorigin href="/assets/project-example-card-BNUFkzCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/company-profile-card-C-Hlf-BC.js">
+  <link rel="modulepreload" crossorigin href="/assets/icon-badge-Bk4A7JFt.js">
+  <link rel="modulepreload" crossorigin href="/assets/component-material-card-Cosg3dQB.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-Bj8-kVmX.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-2c1XsaBn.css">
 </head>
 
 <body class="h-100">
@@ -22,93 +29,95 @@
                 <a class="navbar-brand" href="/">
                     <img src="/images/re-new-logo.png" alt="Re:new logo" width="36" height="36" />
                 </a>
+                <div class="ms-auto">
+                    <a href="/https://www.re-new.io/reuse-library" class="nav-link d-inline-block me-3 ">Re:New</a>
+                    <a href="/" class="nav-link d-inline-block me-3 active">Re:Apply</a>
+                    <a href="/supplier/" class="nav-link d-inline-block ">Re:Connect</a>
+        
+                    <a href="/profile" class="nav-link d-inline-block ms-4" title="My Profile">
+                        <svg class="bi" width="30" height="30" fill="currentColor">
+                            <use xlink:href="/bootstrap-icons.svg#person-circle" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
         </header>        
-        <main class="flex-fill px-4 py-5">
-              <main-heading heading="Material Reuse Library" link="https://www.re-new.io/reuse-library"></main-heading>
+        <main class="flex-fill px-0 py-5">
+              <section class="mx-4">
             
-              <section id="component-search" class="mx-md-5 mb-4 d-flex flex-wrap align-items-start">
-                <div class="row gx-0 mx-md-4 w-100">
-                  <div class="col-12 col-md-6 col-lg-5 col-xl-3">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control fs-5" placeholder="Search for components..." disabled>
-                        <button class="btn btn-primary" type="button">
-                          <svg class="bi" width="14" height="14" fill="currentColor">
-                            <use xlink:href="/bootstrap-icons.svg#search" />
-                          </svg>
-                        </button>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-5 col-xl-3 d-flex align-items-start">
-                    <button class="btn btn-primary fs-5 ms-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#filters" aria-expanded="false" aria-controls="filters">
-                      Filter
+              <main-heading heading="Re:Apply" link="https://www.re-new.io/reuse-library"></main-heading>
+            
+              <section id="component-search" class="mx-md-5 mb-4 d-flex flex-wrap align-items-center">
+              <div class="row gx-0 mx-md-4 flex-grow-1">
+                <div class="col-12 col-md-8 col-lg-7 col-xl-5 search-container">
+                  <div class="input-group mb-3">
+                    <input type="text" id="search-input" class="form-control fs-5 search-input-custom" placeholder="Search for anything...">
+                    <button class="btn btn-primary" type="button" id="search-button">
                       <svg class="bi" width="14" height="14" fill="currentColor">
-                        <use xlink:href="/bootstrap-icons.svg#sliders" />
+                        <use xlink:href="/bootstrap-icons.svg#search" />
                       </svg>
                     </button>
-                    <div class="ms-3 d-flex align-items-center" id="spinner">
-                      <div class="spinner-border me-2" role="status"></div>
-                      Loading...
-                    </div>
-                  </div>
-                  <div class="col-12 mt-2 collapse" id="filters">
-                    <div class="d-flex align-items-start">
-                      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6">
-                        <select id="discipline-layer" class="col" data-tom-select multiple >
-                          <option value="">Discipline/Layer</option>
-                        </select>
-                        <select id="category" class="col" data-tom-select multiple >
-                          <option value="">Category</option>
-                        </select>
-                        <select id="component-type" class="col" data-tom-select multiple >
-                          <option value="">Component Type</option>
-                        </select>
-                        <select id="reuse-type" class="col" data-tom-select multiple >
-                          <option value="">Reuse Type</option>
-                        </select>
-                        <select id="case-study-status" class="col" data-tom-select multiple >
-                          <option value="">Case Study Status</option>
-                          <option value="completed">Completed</option>
-                          <option value="designed">Designed</option>
-                          <option value="in-construction">In Construction</option>
-                        </select>
-                        <select id="project-age" class="col" data-tom-select multiple >
-                          <option value="">Project Age</option>
-                          <option value="<1850 B">Before 1850</option>
-                          <option value="1850 B">1850</option>
-                          <option value="1860 B">1860</option>
-                          <option value="1870 B">1870</option>
-                          <option value="1880 B">1880</option>
-                          <option value="1890 B">1890</option>
-                          <option value="1900 B">1900</option>
-                          <option value="1910 B">1910</option>
-                          <option value="1920 B">1920</option>
-                          <option value="1930 B">1930</option>
-                          <option value="1940 B">1940</option>
-                          <option value="1950 B">1950</option>
-                          <option value="1960 B">1960</option>
-                          <option value="1970 B">1970</option>
-                          <option value="1980 B">1980</option>
-                          <option value="1990 B">1990</option>
-                          <option value="2000 B">2000</option>
-                          <option value="2010 B">2010</option>
-                          <option value="2020 B">2020</option>
-                        </select>
-                      </div>
-                      <button class="btn-close ms-2 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#filters"></button>
-                    </div>
                   </div>
                 </div>
-              </section>
+              </div>
+              
+              <div class="ms-auto me-md-4 mb-3">
+                <a href="/supplier/" class="btn btn-primary">Explore Reuse Services</a>
+              </div>
+            </section>
             
+              <div>
+              <div class="mx-md-5 mb-4 mt-5 d-flex justify-content-between align-items-center" style="display: none;" id="project-examples-container">
+                <h2 class="fw-bold ms-4">PROJECT EXAMPLES</h2>
+                <a href="/project-examples-library/" class="text-decoration-none me-4">See all &gt;</a>
+              </div>
+              <section id="project-example-results" class="mx-md-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-5">
+              </section>
+            </div>
+            
+            <div>
+              <div class="mx-md-5 mb-4 mt-5 d-flex justify-content-between align-items-center" style="display: none;" id="reuse-methodologies-container">
+                <h2 class="fw-bold ms-4">REUSE METHODOLOGIES</h2>
+                <a href="/main-filter-library/" class="text-decoration-none me-4">See all &gt;</a>
+              </div>
               <section id="component-material-results" class="mx-md-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-5">
+              </section>
+            </div>
+            
+            <div>
+              <div class="mx-md-5 mb-4 mt-5 d-flex justify-content-between align-items-center" style="display: none;" id="company-profiles-container">
+                <h2 class="fw-bold ms-4">COMPANY PROFILES</h2>
+                <a href="/company-profiles-library/" class="text-decoration-none me-4">See all &gt;</a>
+              </div>
+              <section id="company-profiles-results" class="mx-md-5 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-5">
+              </section>
+            </div>
+              
               </section>
         </main>
         <footer class="w-100 px-4 py-2 text-center">
-            Copyright 2024 - <a href="https://www.re-new.io/">RE-NEW.IO LIMITED</a>
+            Copyright 2025 - <a href="https://www.re-new.io/">RE-NEW.IO LIMITED</a>
         </footer>
-    </div>
+    </div>
     <script defer data-domain="library.re-new.io" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const path = window.location.pathname;
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === path || 
+              (href !== '/' && path.startsWith(href))) {
+            link.classList.add('active');
+            console.log('Set active:', href);
+          }
+        });
+      });
+    </script>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </body>
 
 </html>

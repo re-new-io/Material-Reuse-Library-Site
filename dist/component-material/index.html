@@ -9,10 +9,16 @@
     <meta property="og:title" content="Material Reuse Library - re:new" />
     <meta property="og:description" content="">
     <meta property="og:image" content="" />
-  <script type="module" crossorigin src="/assets/index.hbs-N-W1UpOi.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/icon-badge-BVoFlI-S.js">
-  <link rel="modulepreload" crossorigin href="/assets/feasibility-considerations-card-DZxKTVhW.js">
-  <link rel="stylesheet" crossorigin href="/assets/icon-badge-JrYtUcsX.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script type="module" crossorigin src="/assets/index.hbs-B164JSHX.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BFjwW7uW.js">
+  <link rel="modulepreload" crossorigin href="/assets/project-example-card-BNUFkzCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/icon-badge-Bk4A7JFt.js">
+  <link rel="modulepreload" crossorigin href="/assets/tags-list-Bj3LNUkw.js">
+  <link rel="modulepreload" crossorigin href="/assets/square-image-card-MlDb2Qa3.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-Bj8-kVmX.css">
 </head>
 
 <body class="h-100">
@@ -22,55 +28,103 @@
                 <a class="navbar-brand" href="/">
                     <img src="/images/re-new-logo.png" alt="Re:new logo" width="36" height="36" />
                 </a>
+                <div class="ms-auto">
+                    <a href="/https://www.re-new.io/reuse-library" class="nav-link d-inline-block me-3 ">Re:New</a>
+                    <a href="/" class="nav-link d-inline-block me-3 active">Re:Apply</a>
+                    <a href="/supplier/" class="nav-link d-inline-block ">Re:Connect</a>
+        
+                </div>
             </nav>
         </header>        
-        <main class="flex-fill px-4 py-5">
-              <main-heading link="/">
-              </main-heading>
+        <main class="flex-fill px-0 py-5">
+              <section class="mx-4">
+              <div class="d-flex align-items-center justify-content-between">
+              <main-heading heading="Component Material" link="/" breadcrumb=""></main-heading>
+              <div class="user-toggle">
+                <input type="checkbox" id="userTypeToggle" />
+                <label for="userTypeToggle" class="toggle-label">
+                  <div class="toggle-option contractor">
+                    <img src="/images/contractor_designer/contractor.png" alt="Contractor" />
+                  </div>
+                  <div class="toggle-option designer">
+                    <img src="/images/contractor_designer/designer.png" alt="Designer" />
+                  </div>
+                </label>
+                <div class="user-role-label" id="userRoleText"></div>
+              </div>
+            </div>
             
               <section class="mx-md-5 mb-4">
                 <div class="row ms-md-3">
                   <div class="col-12 col-lg-3 mx-0 mb-5 mb-lg-0 px-0 row row-cols-1 row-cols-md-2 row-cols-lg-1 d-lg-flex flex-lg-column align-items-start">
                     <component-material-details-card></component-material-details-card>
-            
+                    <design-codes-card></design-codes-card>
+                    <div class="ms-auto me-md-4 mb-5">
+                      <a href="/supplier/" class="btn btn-primary">Explore Reuse Services</a>
+                    </div>
                     <references-card></references-card>
                   </div>
                   <div class="col-12 col-lg-6 mb-5 mb-xl-0">
-                    <feasibility-considerations-card heading="Key Considerations">
-                      <tags-list name="Reuse Considerations" heading="Reuse Considerations"></tags-list>
-                    </feasibility-considerations-card>
-            
                     <section class="mb-5" id="reuse-options">
                       <h3 class="fs-6 text-uppercase">Reuse Options</h3>
                     </section>
-            
+                    <section class="mb-5" id="key-considerations-container">
+                    </section>
                     <section class="mb-5" id="component-variety-types">
                       <h3 class="fs-6 text-uppercase"></h3>
                     </section>
-            
-                    <reclamation-process-card></reclamation-process-card>
-            
-                    <features-suitability-card></features-suitability-card>
+                    <section class="mb-5">
+                    <h3 class="fs-6 text-uppercase mb-3">Reclaimed vs New</h3>
+                    <cost-availability-card></cost-availability-card>
+                    <environmental-impact-card></environmental-impact-card>
+                    <risk-card></risk-card>
+                    <section id="technical-design-container" class="mb-3">
+                    </section>
+                    </section>
+                    <h3 class="fs-6 text-uppercase mb-3">Reclamation Process</h3>
+                    <section id="roadmap-container" class="mb-5">
+                    </section>
                   </div>
                   <div class="col-12 col-lg-3">
-                    <cost-availability-card></cost-availability-card>
-            
-                    <environmental-impact-card></environmental-impact-card>
-            
-                    <section id="project-examples">
-                      <h2 class="fs-6 text-uppercase">Project Examples</h2>
+                    <section id="component-variety-container" class="mb-3">
+                      <h3 class="fs-6 text-uppercase"></h3>
                     </section>
-            
+                    <section class="mt-5">
+                      <h3 class="fs-6 text-uppercase">Project Examples</h3>
+                      <div id="project-examples-container" class="mt-3"></div>
+                    </section>
+                    <section>
                     <tags-list name="Tags" heading="Tags"></tags-list>
+                    </section>
+                    
                   </div>
                 </div>
               </section>
+              </section>
         </main>
         <footer class="w-100 px-4 py-2 text-center">
-            Copyright 2024 - <a href="https://www.re-new.io/">RE-NEW.IO LIMITED</a>
+            Copyright 2025 - <a href="https://www.re-new.io/">RE-NEW.IO LIMITED</a>
         </footer>
     </div>
     <script defer data-domain="library.re-new.io" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const path = window.location.pathname;
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === path || 
+              (href !== '/' && path.startsWith(href))) {
+            link.classList.add('active');
+            console.log('Set active:', href);
+          }
+        });
+      });
+    </script>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </body>
 
 </html>
